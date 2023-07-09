@@ -2,10 +2,14 @@ import { useParams } from "react-router-dom";
 import { data } from "../db/data";
 import ImageCard from "../component/ImageCard";
 export default function Destination() {
-  const { countryId, continentId } = useParams();
-
-  const continent = data.continents.find(({ id }) => id === continentId);
-  const country = continent.countries.find(({ id }) => id === countryId);
+  const { continentId, countrytId } = useParams();
+  console.log("params", continentId, countrytId);
+  const continent = data.continents.find(
+    ({ id }) => id === Number(continentId)
+  );
+  const country = continent.countries.find(
+    ({ id }) => id === Number(countrytId)
+  );
   const destinations = country.destinations;
   return (
     <div>

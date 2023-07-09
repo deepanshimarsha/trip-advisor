@@ -8,11 +8,12 @@ export default function Countries() {
     ({ id }) => id === Number(continentId)
   );
   const countries = continent.countries;
+  console.log("selected continent", continent);
   return (
     <div>
       <h1>Top Countries in {continent.name} for your next holiday</h1>
       {countries.map((country) => {
-        return <ImageCard country={country} selectedcontinent={continent} />;
+        return <ImageCard country={country} selectedContinent={continent} />;
       })}
     </div>
   );

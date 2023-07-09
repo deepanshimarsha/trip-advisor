@@ -6,6 +6,10 @@ export default function ImageCard({
   selectedContinent,
   destination,
 }) {
+  console.log("continent", continent);
+  console.log("country", country);
+  console.log("destination", destination);
+  console.log("selected continent", selectedContinent);
   return (
     <div>
       {continent && (
